@@ -1,0 +1,2 @@
+colorama==0.4.5
+prettytable==3.6.0
