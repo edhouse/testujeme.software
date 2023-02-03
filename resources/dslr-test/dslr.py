@@ -1,22 +1,23 @@
 import time
 
 class DSLRCamera:
-    def __init__(self):
+    def __init__(self, name: str):
         self._iso = 100
-        self._shutter_speed = 1/60
+        self._shutter_speed = round(1/60, 3)
         self._aperture = 2.8
         self._focus_point = (0, 0)
+        self.name = name
 
     def take_photo(self):
-        print(f"Taking photo with ISO: {self._iso}, Shutter Speed: {self._shutter_speed}, Aperture: {self._aperture}, Focus Point: {self._focus_point}")
+        print(f"{self.name}: Taking photo with ISO: {self._iso}, Shutter Speed: {self._shutter_speed}, Aperture: {self._aperture}, Focus Point: {self._focus_point}")
         time.sleep(2)  # Simulate taking a photo
 
     def auto_adjust(self):
         self._iso = 100
-        # self._shutter_speed = 1/120
+        self._shutter_speed = round(1/120, 3)
         self._aperture = 1.6
         self._focus_point = (100, 100)
-        print("Auto adjustment done.")
+        print(f"{self.name}: Auto adjustment done.")
         time.sleep(1)  # Simulate auto adjustment process
 
     @property
@@ -26,7 +27,7 @@ class DSLRCamera:
     @iso.setter
     def iso(self, value):
         self._iso = value
-        print(f"ISO set to {value}")
+        print(f"{self.name}: ISO set to {value}")
         time.sleep(1)  # Simulate setting process
 
     @property
@@ -36,7 +37,7 @@ class DSLRCamera:
     @shutter_speed.setter
     def shutter_speed(self, value):
         self._shutter_speed = value
-        print(f"Shutter speed set to {value}")
+        print(f"{self.name}: Shutter speed set to {value}")
         time.sleep(1)  # Simulate setting process
 
     @property
@@ -46,7 +47,7 @@ class DSLRCamera:
     @aperture.setter
     def aperture(self, value):
         self._aperture = value
-        print(f"Aperture set to {value}")
+        print(f"{self.name}: Aperture set to {value}")
         time.sleep(1)  # Simulate setting process
 
     @property
@@ -56,5 +57,5 @@ class DSLRCamera:
     @focus_point.setter
     def focus_point(self, value):
         self._focus_point = value
-        print(f"Focus point set to {value}")
+        print(f"{self.name}: Focus point set to {value}")
         time.sleep(1)  # Simulate setting process
