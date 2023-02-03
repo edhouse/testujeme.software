@@ -8,4 +8,4 @@
 
 * Activate environment<br />`.\venv\Scripts\activate`
 * Install requirements<br />`pip install -r requirements.txt`
-* Run test<br />`python .\test1.py`
+* Run tests<br />`python .\test1.py`<br />`python .\test2.py`<br />`python .\test3.py`
