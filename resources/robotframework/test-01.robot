@@ -5,11 +5,11 @@ Library    DateTime
 
 *** Tasks ***
 Test Windows Calculator
-    # Run and set control window
+    # Setup - perform actions before the test
     [Setup]    Windows Run   calc.exe
     Control Window    name:Calculator
     
-    # Steps
+    # Test steps
     Click    type:Button and name:"Nine"
     Click    id:num9Button
     Click    type:Button and name:"Plus"
@@ -24,6 +24,7 @@ Test Windows Calculator
     ${timestamp}=      Get current date    result_format=%Y-%m-%d_%H-%M-%S
     Screenshot    type:type:WindowControl and name:"Calculator"    calculator_${timestamp}.jpg
    
+    # Teardown - perform actions after the test
     [Teardown]   Close Current Window
 
 *** Keywords ***
