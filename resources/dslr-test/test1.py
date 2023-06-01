@@ -1,5 +1,6 @@
 from dslr import DSLRCamera # dummy app
 
+# test script
 camera1 = DSLRCamera("Canon")
 camera2 = DSLRCamera("Nikon")
 camera3 = DSLRCamera("Sony")

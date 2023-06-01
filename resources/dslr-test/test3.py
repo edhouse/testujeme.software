@@ -1,7 +1,7 @@
 from dslr import DSLRCamera  # dummy app
-from prettytable import PrettyTable
-from colorama import Fore, Style
+from tables_diff import tables_diff
 
+# test script
 camera1 = DSLRCamera("Canon")
 camera2 = DSLRCamera("Nikon")
 camera3 = DSLRCamera("Sony")
@@ -26,16 +26,6 @@ data_after = [
     [camera3.name, camera3.iso, camera3.shutter_speed, camera3.aperture, camera3.focus_point],
 ]
 
-
-for x, row in enumerate(data_before):
-    for y, cell in enumerate(row):
-        if data_before[x][y] != data_after[x][y]:
-            data_after[x][y] = Fore.RED + str(data_before[x][y]) + Fore.LIGHTBLACK_EX + " -> " + Fore.GREEN + str(data_after[x][y]) + Style.RESET_ALL
-
-table_result = PrettyTable()
-table_result.field_names = header
-for row in data_after:
-    table_result.add_row(row)
-
+table_result = tables_diff(data_before, data_after, header)
 print('Test result')
 print(table_result)
