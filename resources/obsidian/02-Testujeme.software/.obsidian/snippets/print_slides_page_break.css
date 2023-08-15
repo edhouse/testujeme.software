@@ -1,0 +1,5 @@
+@media print {
+  hr {
+    page-break-after: always;
+  }
+}
