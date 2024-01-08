@@ -1,0 +1,4 @@
+notebook
+ipython-autotime
+matplotlib
+pandas
