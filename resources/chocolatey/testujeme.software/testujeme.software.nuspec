@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>testujeme.software</id>
+    <version>0.1.0</version>
+    <title>Testujeme Software Example Package</title>
+    <authors>Edhouse</authors>
+    <summary>Example of installation of the package with dependencies.</summary>
+    <description>This package just install two dependencies without any specific configuration.</description>
+    <dependencies>
+      <dependency id="telegraf" version="[1.30.2]" />
+      <dependency id="influxdb" version="[1.8.10]" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
