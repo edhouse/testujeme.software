@@ -1,3 +1,3 @@
-# Edhouse Tech_blog
+# testujeme.software
 
-~~https://testujeme.software/~~ => https://www.edhouse.eu/cz/blog[sqa]/
+https://testujeme.software/
